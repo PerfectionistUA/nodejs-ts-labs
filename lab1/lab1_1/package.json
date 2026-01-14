@@ -1,0 +1,15 @@
+{
+  "name": "lab1_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "npm run server",
+    "deploy": "echo \"Deploy script placeholder\"",
+    "server": "npx http-server . -p 8080 -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
