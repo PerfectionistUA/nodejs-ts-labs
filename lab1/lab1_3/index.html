@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lab1_3</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <main class="max-w-5xl mx-auto p-6">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl font-bold mb-1">Робота 1. Завдання 3</h2>
+      <p class="text-gray-600">Генерація HTML-таблиці (JS + REST API)</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+        <div class="text-sm text-gray-600">
+          Джерело даних:
+          <a class="text-blue-600 underline" target="_blank" rel="noreferrer"
+             href="https://restcountries.com/v3.1/all?fields=name,maps">
+            restcountries.com (name,maps)
+          </a>
+        </div>
+
+        <div class="flex gap-2">
+          <input id="filter"
+                 class="border rounded-lg px-3 py-2 w-full md:w-80"
+                 placeholder="Фільтр по назві країни..." />
+          <button id="reloadBtn"
+                  class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            Reload
+          </button>
+        </div>
+      </div>
+
+      <div id="status" class="text-sm text-gray-600 mb-3">—</div>
+
+      <div class="overflow-auto border rounded-lg">
+        <table class="min-w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="text-left px-3 py-2 border-b w-16">#</th>
+              <th class="text-left px-3 py-2 border-b">Country</th>
+              <th class="text-left px-3 py-2 border-b">Link to the map</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <!-- Рядки таблиці JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
